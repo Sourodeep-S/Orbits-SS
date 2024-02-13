@@ -1,18 +1,44 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
+using TMPro;
+using System.Collections;
 
 public class GameplayManager : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+  [SerializeField] private TextMeshProUGUI scoreText;
+  [SerializeField] private GameObject scorePrefab;
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
+  private int score;
+
+  private void Awake()
+  {
+    GameManager.Instance.isInitialized = true;
+
+    score = 0;
+    scoreText.text = score.ToString();
+    SpawnScore();
+  }
+
+  private void SpawnScore()
+  {
+    Instantiate(scorePrefab);
+  }
+
+  public void UpdateScore()
+  {
+    score++;
+    scoreText.text = score.ToString();
+    SpawnScore();
+  }
+
+  public void GameEnded()
+  {
+    GameManager.Instance.score = score;
+    StartCoroutine(GameOver());
+  }
+
+  private IEnumerator GameOver()
+  {
+    yield return new WaitForSeconds(2f);
+    GameManager.Instance.GoToMainMenu();
+  }
 }

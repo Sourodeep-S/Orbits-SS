@@ -1,18 +1,12 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class Obstacles : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+  [SerializeField] private float rotateSpeed;
+  [SerializeField] private Transform rotateTransform;
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
+  private void FixedUpdate()
+  {
+    rotateTransform.Rotate(0, 0, rotateSpeed * Time.fixedDeltaTime);
+  }
 }

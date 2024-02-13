@@ -1,18 +1,19 @@
-using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
 public class Score : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+  [SerializeField] private Transform centre;
+  [SerializeField] private List<float> spawnPosX;
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
+  private void Awake()
+  {
+    transform.localPosition = Vector3.right * spawnPosX[Random.Range(0, spawnPosX.Count)];
+    centre.rotation = Quaternion.Euler(0f, 0f, Random.Range(0, 36) * 10f);
+  }
+
+  public void ScoreAdded()
+  {
+    Destroy(centre.gameObject);
+  }
 }
