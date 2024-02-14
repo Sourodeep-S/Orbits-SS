@@ -1,3 +1,4 @@
+#if UNITY_EDITOR
 using UnityEngine;
 
 public class SoundManager : MonoBehaviour
@@ -26,3 +27,4 @@ public class SoundManager : MonoBehaviour
     src.PlayOneShot(clip);
   }
 }
+#endif

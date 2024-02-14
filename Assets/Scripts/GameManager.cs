@@ -1,3 +1,4 @@
+#if UNITY_EDITOR
 using UnityEngine;
 
 public class GameManager : MonoBehaviour
@@ -51,3 +52,4 @@ public class GameManager : MonoBehaviour
     UnityEngine.SceneManagement.SceneManager.LoadScene(gameplay);
   }
 }
+#endif

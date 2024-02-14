@@ -1,3 +1,4 @@
+#if UNITY_EDITOR
 using UnityEngine;
 
 public class Obstacles : MonoBehaviour
@@ -10,3 +11,4 @@ public class Obstacles : MonoBehaviour
     rotateTransform.Rotate(0, 0, rotateSpeed * Time.fixedDeltaTime);
   }
 }
+#endif

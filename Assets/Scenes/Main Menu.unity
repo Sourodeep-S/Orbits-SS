@@ -1115,7 +1115,7 @@ MonoBehaviour:
   hiscoreText: {fileID: 429081401}
   hiscore: {fileID: 2100630375}
   clickSound: {fileID: 8300000, guid: 5d43e89116c298d498a5719a14217fa2, type: 3}
-  animationTime: 1.6
+  animationTime: 1
   speedCurve:
     serializedVersion: 2
     m_Curve:

@@ -1,3 +1,4 @@
+#if UNITY_EDITOR
 using UnityEngine;
 using TMPro;
 using System.Collections;
@@ -42,3 +43,4 @@ public class GameplayManager : MonoBehaviour
     GameManager.Instance.GoToMainMenu();
   }
 }
+#endif
