@@ -39,7 +39,7 @@ public class GameplayManager : MonoBehaviour
 
   private IEnumerator GameOver()
   {
-    yield return new WaitForSeconds(2f);
+    yield return new WaitForSeconds(1.5f);
     GameManager.Instance.GoToMainMenu();
   }
 }

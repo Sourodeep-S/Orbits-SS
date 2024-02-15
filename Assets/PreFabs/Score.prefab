@@ -257,6 +257,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   centre: {fileID: 2619383334659428227}
   spawnPosX:
-  - 5.55
-  - 9.8
-  - 13.9
+  - 5
+  - 8.8
+  - 12.6

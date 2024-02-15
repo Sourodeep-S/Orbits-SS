@@ -9,6 +9,7 @@ public class Obstacles : MonoBehaviour
   private void FixedUpdate()
   {
     rotateTransform.Rotate(0, 0, rotateSpeed * Time.fixedDeltaTime);
+    rotateSpeed += 0.01f;
   }
 }
 #endif
